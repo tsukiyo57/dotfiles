@@ -1,0 +1,9 @@
+Civicomfy
+ComfyUI-Lora-Manager
+ComfyUI-Manager
+ComfyUI-nunchaku
+ComfyUI_InstantID
+ComfyUI_PuLID_Flux_ll
+PuLID_ComfyUI
+civitai_comfy_nodes
+comfyui_controlnet_aux

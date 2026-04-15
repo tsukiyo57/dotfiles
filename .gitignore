@@ -1,0 +1,6 @@
+# SearXNG secret (must be replaced before use)
+# DO NOT commit real secret keys
+
+# OS
+.DS_Store
+*.swp

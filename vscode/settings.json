@@ -1,0 +1,15 @@
+{
+    "python.defaultInterpreterPath": "/bin/python3",
+    "claudeCode.preferredLocation": "panel",
+    "git.openRepositoryInParentFolders": "never",
+    "claudeCode.selectedModel": "default",
+    "terminal.integrated.rightClickBehavior": "paste",
+    "terminal.integrated.copyOnSelection": true,
+    "git.autofetch": true,
+    "accessibility.voice.speechLanguage": "ja-JP",
+    "whisper-assistant.apiProvider": "localhost",
+    "whisper-assistant.apiKey": "localhost-key-must-be-set",
+    "whisper-assistant.customEndpoint": "http://localhost:4444",
+    "whisper-assistant.customRecordingCommand": "arecord -f S16_LE -r 16000 -c 1 $AUDIO_FILE",
+    "git.enableSmartCommit": true
+}

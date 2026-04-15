@@ -1,0 +1,26 @@
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: ai-knowledge-n8n
+    network_mode: host
+    environment:
+      - GENERIC_TIMEZONE=Asia/Tokyo
+      - TZ=Asia/Tokyo
+      - N8N_SECURE_COOKIE=false
+      - N8N_PORT=5678
+      # Pass-through env vars for use in HTTP Request nodes
+      - NOTION_TOKEN=${NOTION_TOKEN}
+      - NOTION_DATABASE_ID=${NOTION_DATABASE_ID}
+      - NOTION_DIGEST_DATABASE_ID=${NOTION_DIGEST_DATABASE_ID}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - LMSTUDIO_URL=http://localhost:1234
+      - SEARXNG_URL=http://localhost:8080
+    volumes:
+      - ./n8n-data:/home/node/.n8n
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:5678/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s

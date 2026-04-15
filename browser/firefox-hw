@@ -1,0 +1,9 @@
+#!/bin/bash
+# Note: As of 2026-04, Firefox + NVIDIA + X11 has a known DMA-BUF issue (bug 1924578)
+# that prevents hardware video decode. These env vars are set as best-effort.
+LIBVA_DRIVER_NAME=nvidia \
+LIBVA_DRIVERS_PATH=/home/ryusei/.local/lib/dri \
+MOZ_ENABLE_WAYLAND=0 \
+MOZ_DISABLE_RDD_SANDBOX=1 \
+MOZ_DRM_DEVICE=/dev/dri/renderD128 \
+exec firefox "$@"

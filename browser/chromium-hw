@@ -1,0 +1,8 @@
+#!/bin/bash
+LIBVA_DRIVER_NAME=nvidia \
+LIBVA_DRIVERS_PATH=/home/ryusei/.local/lib/dri \
+exec /snap/bin/chromium \
+  --ignore-gpu-blocklist \
+  --enable-accelerated-video-decode \
+  --enable-features=VaapiVideoDecodeLinuxGL \
+  "$@"
