@@ -7,6 +7,8 @@ OS 再インストール後の環境復元用リポジトリ。
 ```
 dotfiles/
   setup.sh                  # マスタインストールスクリプト
+  lmstudio/
+    models.md                # LM Studio モデル一覧（再DL用）
   comfyui/
     custom_nodes.txt         # カスタムノード一覧
     install.sh               # インストール手順
@@ -68,6 +70,10 @@ NOTION_DATABASE_ID=...
 NOTION_DIGEST_DATABASE_ID=...
 GEMINI_API_KEY=...
 ```
+
+### LM Studio
+`lmstudio/models.md` に一覧あり。合計約 180 GB。  
+再インストール後は LM Studio GUI または `lms get <model>` で再ダウンロード。
 
 ### ComfyUI
 モデル（167GB）は手動で再ダウンロード。  
